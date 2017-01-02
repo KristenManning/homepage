@@ -19,6 +19,7 @@ $.ajax({url: nyt_url, method: 'GET'}).done(function(result) {
 // Open Weather Map 
 // API Key = 7339d8215d69c41b505afbebf91a1097
 // We could look into doing this by city ID (see Open Weather Map documentation) for more accuracy
+// This example uses city (name) and country code (initials) in the url 
 var city = "New York"
 var country_code = "us"
 var weather_url = "http://api.openweathermap.org/data/2.5/forecast?q="+city+","+country_code+"&mode=json&APPID=7339d8215d69c41b505afbebf91a1097"
@@ -29,8 +30,25 @@ $.ajax({url: weather_url, method: 'GET'}).done(function(result) {
   console.log(result);
   var kelvin = result.list[0].main.temp; 
   var faren = Math.round(kelvin*9/5 - 459.67);
-  $("#weather").append(city + "<br>" + result.list[0].weather[0].description + "<br>" + faren + " Degrees Farenheit")
+  $("#weather").append("<b>" + city + "</b><br>" + result.list[0].weather[0].description + "<br>" + faren + " Degrees Farenheit <br><br>")
   
   }).fail(function(err) {
   throw err;
 });
+
+// Holiday API 
+// API Key = 052cd1a1-8dd6-4b92-b692-e4881a5e6710
+
+// This particular API only allows you to see historical data, so it's not super useful. To see upcoming holidays, you must pay for a premium account :P 
+var month = "01";
+var year =  "2016"
+var holiday_url = "https://holidayapi.com/v1/holidays?key=052cd1a1-8dd6-4b92-b692-e4881a5e6710&country=US&year="+year+"&month="+month;
+
+// The free version does not allow you to 
+$.ajax({url: holiday_url, method: 'GET'}).done(function(result) {
+  console.log(result);
+  }).fail(function(err) {
+  throw err;
+});
+
+  
