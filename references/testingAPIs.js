@@ -1,7 +1,6 @@
 // New York Times Top Stories 
 // API Key = 9576deafb6a7491fb2be036f97f0b645
 
-
 var topic = "opinion" // topic choices include: home, opinion, world, national, politics, business, technology, science, health, sports, arts, books, movies, theater, fashion, food, travel... and more
 var nyt_url = "http://api.nytimes.com/svc/topstories/v1/"+topic+".json?api-key=9576deafb6a7491fb2be036f97f0b645"
 $.ajax({url: nyt_url, method: 'GET'}).done(function(result) {
@@ -14,6 +13,7 @@ $.ajax({url: nyt_url, method: 'GET'}).done(function(result) {
   }).fail(function(err) {
   throw err;
 });
+
 
 
 // Open Weather Map 
@@ -36,6 +36,8 @@ $.ajax({url: weather_url, method: 'GET'}).done(function(result) {
   throw err;
 });
 
+
+
 // Holiday API 
 // API Key = 052cd1a1-8dd6-4b92-b692-e4881a5e6710
 
@@ -49,6 +51,16 @@ $.ajax({url: holiday_url, method: 'GET'}).done(function(result) {
   console.log(result);
   }).fail(function(err) {
   throw err;
+});
+
+
+
+// MTA Bus Times 
+// API Key = f71be851-38a7-4048-a073-a073954305dc
+var queryURL = "http://bustime.mta.info/api/siri/stop-monitoring.json?key=f71be851-38a7-4048-a073-a073954305dc&OperatorRef=MTA&MonitoringRef=308209&LineRef=MTA NYCT_B63";
+
+$.ajax({ url: queryURL, method: "GET" }).done(function(response) {
+  console.log(response)
 });
 
   
