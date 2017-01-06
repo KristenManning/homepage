@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title></title>
+</head>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<body>
+<div class = "" id = "dummy">EDIT ME</div>
+  <script type="text/javascript">
+    var key = "MDI5NTk3ODY4MDE0ODM2NjQyMjYzNjZhMg000";
+    var id = "id=1007"
+    var queryURL = "http://api.npr.org/query?id=1007&apiKey="+ key;
+    $.ajax({
+      url:queryURL,
+      method: "GET"
+    }).done(function(response){
+      console.log(response);
+      for (let variable in response){
+        $("#dummy").text(response);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -12,3 +12,16 @@ h3{
 
 p{
 }
+
+.landing{
+  background-color: red;
+}
+.news{
+  background-color: blue;
+}
+.weather{
+  background-color: purple;
+}
+.toDo{
+  background-color: yellow;
+}
