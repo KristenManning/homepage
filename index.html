@@ -18,57 +18,58 @@
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 
+
 <body>
   <div class="container" id = "landingText">
     <p class = "" id = "landingText">WELCOME</p>
   </div>
-    <div class="container" id = "button">
+<div class = "" id = "sidenav">
+    <a href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeNav()">&times;</a>
+    <ul class = "" id = "news-sidenav">
+      <a href = "#" class = "" id = "">
+        <label>Weather</label>
+      </a>
+    </ul>
+    <ul class = "" id = "weather-sidenav">
+      <a href = "#" class = "" id = "">
+        <label>News</label>
+      </a>
+    </ul>
+    <ul class = "" id = "to-do-sidenav">
+      <a href = "#" class = "" id = "">
+        <label>To Do List</label>
+      </a>
+    </ul>
+    <ul class = "" id = "transit-sidenav">
+      <a href = "#" class = "" id = "">
+        <label>Transit</label>
+      </a>
+    </ul>            
+</div>
+<span onclick="openNav()">open</span>
+
+<div class="container" id = "button">
     <button class = "btn btn-primary" id = "test">TEST</button>
-  </div>
+</div>
 <!-- Keep all the webpage contents within this div -->
-<div class = "container" id = "wrapper">
+<div class = "main" id = "wrapper">
   <div class="section active" id = "weather">
     <!-- Weather Page Code Here -->
     <p class = "" id = "">WEATHER</p>
-    <img src="https://images4.alphacoders.com/710/thumb-1920-71068.jpg">
+<!--     <img src="https://images4.alphacoders.com/710/thumb-1920-71068.jpg"> -->
   </div>
   <div class = "section" id = "news">
     <!-- News Page Code Here -->
     <p class="" id = "">NEWS</p>
-    <img src="https://newevolutiondesigns.com/images/freebies/cat-wallpaper-16.jpg">
   </div>  
   <div class = "section" id = "toDo">
     <!-- To Do Code Here -->
     <p class = "" id = "">TO DO</p>
-    <img src="http://eskipaper.com/images/cat-background-2.jpg">
   </div>
   <div class = "section" id = "transit">
     <!-- Transit Code Here -->
     <p class = "" id = "">TRANSIT</p>
-    <img src="http://www.desktopwallpaperhd.net/wallpapers/2/b/cat-wallpaper-background-napper-funny-desktop-kitty-26779.jpg">
   </div>
-</div>
-<div class = "container" id = "side-nav-bar">
-    <ul class = "" id = "news-side-nav-bar">
-      <a src="" class = "" id = "">
-        <label>News</label>
-      </a>
-    </ul>
-    <ul class = "" id = "weather-side-nav-bar">
-      <a src="" class = "" id = "">
-        <label>Weather</label>
-      </a>
-    </ul>
-    <ul class = "" id = "to-do-side-nav-bar">
-      <a src="" class = "" id = "">
-        <label>To Do List</label>
-      </a>
-    </ul>
-    <ul class = "" id = "transit-side-nav-bar">
-      <a src="" class = "" id = "">
-        <label>Transit</label>
-      </a>
-    </ul>            
 </div>
 
 </body>

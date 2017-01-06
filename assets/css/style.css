@@ -12,16 +12,63 @@ h3{
 
 p{
 }
+/*These are placeholders until we decide on what stylizing we want*/
+#weather{
+ background-image: url("https://images4.alphacoders.com/710/thumb-1920-71068.jpg") ;
+}
+#news{
+  background-image: url("https://newevolutiondesigns.com/images/freebies/cat-wallpaper-16.jpg");
+}
+#toDo{
+  background-image: url("http://eskipaper.com/images/cat-background-2.jpg");
+}
+#transit{
+  background-image: url("http://www.desktopwallpaperhd.net/wallpapers/2/b/cat-wallpaper-background-napper-funny-desktop-kitty-26779.jpg");
+}
+/*All Nav Bar CSS*/
+/*Nav Bar Itself when it pops*/
+#sidenav{
+	height: 100%; 
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background-color: #111; 
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  width: 0px; 
 
-.landing{
-  background-color: red;
 }
-.news{
-  background-color: blue;
+/*Adding css to actual material in Nav Bar*/
+#sidenav ul a label {
+	padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s
 }
-.weather{
-  background-color: purple;
+/*Change color when hovered*/
+#sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
 }
-.toDo{
-  background-color: yellow;
+/*CSS to close button*/
+#sidenav #closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
+/*More Animation*/
+.main{
+	transition: margin-left .5s;
+  padding: 20px;
+}
+/*Accounting for Phone Screens*/
+@media screen and (max-height: 450px) {
+    #sidenav {padding-top: 15px;}
+    #sidenav a {font-size: 18px;}
+}
+/*Nav Bar CSS ends*/
