@@ -7,6 +7,7 @@ $("#test").on("click", function(){
 // NavBar CSS Starts
  // Bump Page Content Over 
 function openNav() {
+
   document.getElementById("sidenav").style.width = "250px";
   document.getElementById("wrapper").style.marginLeft = "250px";
 }

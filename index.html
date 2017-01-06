@@ -20,53 +20,56 @@
 
 
 <body>
-  <div class="container" id = "landingText">
+  <div class="container landing" id = "landingText">
     <p class = "" id = "landingText">WELCOME</p>
   </div>
-<div class = "" id = "sidenav">
+<!-- Side Nav Code Starts Here -->
+<div class = "home" id = "sidenav">
     <a href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeNav()">&times;</a>
     <ul class = "" id = "news-sidenav">
-      <a href = "#" class = "" id = "">
+      <a href = "#page1" class = "" id = "">
         <label>Weather</label>
       </a>
     </ul>
     <ul class = "" id = "weather-sidenav">
-      <a href = "#" class = "" id = "">
+      <a href = "#page2" class = "" id = "">
         <label>News</label>
       </a>
     </ul>
     <ul class = "" id = "to-do-sidenav">
-      <a href = "#" class = "" id = "">
+      <a href = "#page3" class = "" id = "">
         <label>To Do List</label>
       </a>
     </ul>
     <ul class = "" id = "transit-sidenav">
-      <a href = "#" class = "" id = "">
+      <a href = "#page4" class = "" id = "">
         <label>Transit</label>
       </a>
     </ul>            
 </div>
-<span onclick="openNav()">open</span>
-
-<div class="container" id = "button">
+<!-- Side Nav Code Ends Here -->
+<!-- Open Side Nav Button -->
+<span style="position: absolute; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776; open</span>
+<!-- Use this button to test JS -->
+<div class="container home" id = "button">
     <button class = "btn btn-primary" id = "test">TEST</button>
 </div>
 <!-- Keep all the webpage contents within this div -->
-<div class = "main" id = "wrapper">
-  <div class="section active" id = "weather">
+<div class = "main home" id = "wrapper">
+  <div class="section active" data-anchor="page1" id = "weather">
     <!-- Weather Page Code Here -->
     <p class = "" id = "">WEATHER</p>
 <!--     <img src="https://images4.alphacoders.com/710/thumb-1920-71068.jpg"> -->
   </div>
-  <div class = "section" id = "news">
+  <div class = "section" data-anchor="page2" id = "news">
     <!-- News Page Code Here -->
     <p class="" id = "">NEWS</p>
   </div>  
-  <div class = "section" id = "toDo">
+  <div class = "section" data-anchor="page3" id = "toDo">
     <!-- To Do Code Here -->
     <p class = "" id = "">TO DO</p>
   </div>
-  <div class = "section" id = "transit">
+  <div class = "section" data-anchor="page4" id = "transit">
     <!-- Transit Code Here -->
     <p class = "" id = "">TRANSIT</p>
   </div>
