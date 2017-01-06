@@ -17,12 +17,11 @@
 <!-- javascript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
-
-
 <body>
-  <div class="container landing" id = "landingText">
+<!-- Landing Page -->
+<!--   <div class="container landing" id = "landingText">
     <p class = "" id = "landingText">WELCOME</p>
-  </div>
+  </div> -->
 <!-- Side Nav Code Starts Here -->
 <div class = "home" id = "sidenav">
     <a href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeNav()">&times;</a>
@@ -49,17 +48,19 @@
 </div>
 <!-- Side Nav Code Ends Here -->
 <!-- Open Side Nav Button -->
-<span style="position: absolute; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776; open</span>
-<!-- Use this button to test JS -->
-<div class="container home" id = "button">
-    <button class = "btn btn-primary" id = "test">TEST</button>
-</div>
+<span style="position: absolute; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776; open</span> 
 <!-- Keep all the webpage contents within this div -->
 <div class = "main home" id = "wrapper">
+
   <div class="section active" data-anchor="page1" id = "weather">
+
     <!-- Weather Page Code Here -->
+<!-- Use this button to test JS -->
+    <div class="container home" id = "button">
+    <button class = "btn btn-primary" id = "test">TEST</button>
+</div>
+
     <p class = "" id = "">WEATHER</p>
-<!--     <img src="https://images4.alphacoders.com/710/thumb-1920-71068.jpg"> -->
   </div>
   <div class = "section" data-anchor="page2" id = "news">
     <!-- News Page Code Here -->
@@ -74,7 +75,6 @@
     <p class = "" id = "">TRANSIT</p>
   </div>
 </div>
-
 </body>
 </html>
 
