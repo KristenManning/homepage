@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage();
+    $('#wrapper').fullpage();
 }); 
   $("#test").on("click", function(){
     console.log("ouch");
