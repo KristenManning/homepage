@@ -3,7 +3,11 @@
 <head>
   <title>Cobra Fighters | Homepage App</title>
 <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+  <!-- fullpage JS -->
+  <script src = "assets/javascript/jquery.fullPage.min.js"></script>
+<!-- fullpage CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css">
 <!-- reset -->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 <!-- custom stylesheet -->
@@ -12,25 +16,28 @@
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 
-<body class = "landing">
+<body>
   <div class="container" id = "landingText">
     <p class = "" id = "landingText">WELCOME</p>
   </div>
-  <div class="container" id = "">
+  <div class="container" id = "wrapper">
     <button class = "btn btn-primary" id = "test">TEST</button>
   </div>
-  <div class = "" id = "NewsText">
+  <div class = "section" id = "news">
     <p class="" id = "">NEWS</p>
+    <img src="https://newevolutiondesigns.com/images/freebies/cat-wallpaper-16.jpg">
   </div>
-  <div class="row" id = "">
-    <div class="col-md-12" id = "">
-    </div>
-  </div>
-  <div class="" id = "WeatherText">
+  <div class="section active" id = "weather">
     <p class = "" id = "">WEATHER</p>
+    <img src="https://images4.alphacoders.com/710/thumb-1920-71068.jpg">
   </div>
-  <div class = "" id = "ToDoText">
+  <div class = "section" id = "toDo">
     <p class = "" id = "">TO DO</p>
+    <img src="http://eskipaper.com/images/cat-background-2.jpg">
+  </div>
+  <div class = "section" id = "transit">
+    <p class = "" id = "">TRANSIT</p>
+    <img src="http://www.desktopwallpaperhd.net/wallpapers/2/b/cat-wallpaper-background-napper-funny-desktop-kitty-26779.jpg">
   </div>
   <div class = "container" id = "side-nav-bar">
     <ul class = "" id = "news-side-nav-bar">
@@ -47,7 +54,12 @@
       <a src="" class = "" id = "">
         <label>To Do List</label>
       </a>
-    </ul>    
+    </ul>
+    <ul class = "" id = "transit-side-nav-bar">
+      <a src="" class = "" id = "">
+        <label>Transit</label>
+      </a>
+    </ul>            
   </div>
 </body>
 </html>
