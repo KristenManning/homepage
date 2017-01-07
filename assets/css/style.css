@@ -27,18 +27,17 @@ p{
 }
 /*All Nav Bar CSS*/
 /*Nav Bar Itself when it pops*/
-#sidenav{
-	height: 100%; 
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-  background-color: #111; 
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
-  width: 0px; 
-
+#sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 /*Adding css to actual material in Nav Bar*/
 #sidenav ul a label {
@@ -55,11 +54,11 @@ p{
 }
 /*CSS to close button*/
 #sidenav #closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 /*More Animation*/
 .main{

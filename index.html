@@ -6,25 +6,32 @@
   <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
   <!-- fullpage JS -->
   <script src = "assets/javascript/jquery.fullPage.min.js"></script>
-
+  <!-- Multi Screen JS -->
+ <script type="text/javascript" src="assets/javascript/multi-screen.js"></script>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- fullpage CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css">
+  <!-- Multi Screen CSS -->
+  <link href="assets/css/multi-screen-css.css" type="text/css" rel="stylesheet">
 <!-- reset -->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 <!-- custom stylesheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <!-- javascript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <script type="text/javascript">$(document).ready(function() { MultiScreen.init(); });</script>
 </head>
 <body>
 <!-- Landing Page -->
-<!--   <div class="container landing" id = "landingText">
+  <div class="container ms-container ms-default" id = "landing">
     <p class = "" id = "landingText">WELCOME</p>
-  </div> -->
+   <a class="ms-nav-link" id = "enterPage" data-ms-target="home" data-ms-animation = "fadetop" href="javascript:void(0)">link</a>
+  </div>
+
+<div class = "ms-container" id = "home">
 <!-- Side Nav Code Starts Here -->
-<div class = "home" id = "sidenav">
+<div class = "" id = "sidenav">
     <a href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeNav()">&times;</a>
     <ul class = "" id = "news-sidenav">
       <a href = "#page1" class = "" id = "">
@@ -48,19 +55,19 @@
     </ul>            
 </div>
 <!-- Side Nav Code Ends Here -->
+<div class = "" id ="openClick">
+  <span style="color: yellow; position: absolute; z-index: 0; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776;CLICK ME</span>
+</div>
 <!-- Open Side Nav Button -->
-<span style="position: absolute; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776; open</span> 
+
 <!-- Keep all the webpage contents within this div -->
-<div class = "main home" id = "wrapper">
-
+<div class = "main" id = "wrapper" style = "z-index: -2">
   <div class="section active" data-anchor="page1" id = "weather">
-
     <!-- Weather Page Code Here -->
 <!-- Use this button to test JS -->
-    <div class="container home" id = "button">
-    <button class = "btn btn-primary" id = "test">TEST</button>
-</div>
-
+    <div class= "home" id = "button">
+      <button class = "btn btn-primary" id = "test">TEST</button>
+    </div>
     <p class = "" id = "">WEATHER</p>
   </div>
   <div class = "section" data-anchor="page2" id = "news">
@@ -76,6 +83,10 @@
     <p class = "" id = "">TRANSIT</p>
   </div>
 </div>
+</div>
+
+
+
 </body>
 </html>
 

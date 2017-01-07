@@ -1,10 +1,17 @@
 $(document).ready(function() {
     $('#wrapper').fullpage();
 }); 
+
 $("#test").on("click", function(){
     console.log("ouch");
-  });
-// NavBar CSS Starts
+});
+$("#open").on("click",function(){
+  document.getElementById("open").style.zIndex = "-1";
+});
+$("#closebtn").on("click", function(){
+  document.getElementById("openClick").style.zIndex = "0";
+});
+// NavBar JS Starts
  // Bump Page Content Over 
 function openNav() {
 
@@ -17,4 +24,4 @@ function closeNav() {
   document.getElementById("sidenav").style.width = "0";
   document.getElementById("wrapper").style.marginLeft = "0";
 }
-// NavBar CSS Ends
+// NavBar JS Ends
