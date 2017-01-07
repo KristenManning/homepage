@@ -15,15 +15,19 @@ p{
 /*These are placeholders until we decide on what stylizing we want*/
 #weather{
  background-image: url("https://images4.alphacoders.com/710/thumb-1920-71068.jpg") ;
+ z-index: -1;
 }
 #news{
   background-image: url("https://newevolutiondesigns.com/images/freebies/cat-wallpaper-16.jpg");
+  z-index: -1;
 }
 #toDo{
   background-image: url("http://eskipaper.com/images/cat-background-2.jpg");
+  z-index: -1;
 }
 #transit{
   background-image: url("http://www.desktopwallpaperhd.net/wallpapers/2/b/cat-wallpaper-background-napper-funny-desktop-kitty-26779.jpg");
+  z-index: -1;
 }
 /*All Nav Bar CSS*/
 /*Nav Bar Itself when it pops*/
