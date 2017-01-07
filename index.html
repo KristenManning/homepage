@@ -28,6 +28,8 @@
     <p class = "" id = "landingText">WELCOME</p>
    <a class="ms-nav-link" id = "enterPage" data-ms-target="home" data-ms-animation = "fadetop" href="javascript:void(0)">link</a>
   </div>
+
+<div class = "ms-container" id = "home">
 <!-- Side Nav Code Starts Here -->
 <div class = "" id = "sidenav">
     <a href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeNav()">&times;</a>
@@ -53,14 +55,13 @@
     </ul>            
 </div>
 <!-- Side Nav Code Ends Here -->
-<div class = "ms-container" id = "home">
 <div class = "" id ="openClick">
-  <span style="position: absolute; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776;CLICK ON MEEEEE</span>
+  <span style="color: yellow; position: absolute; z-index: 0; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776;CLICK ME</span>
 </div>
 <!-- Open Side Nav Button -->
 
 <!-- Keep all the webpage contents within this div -->
-<div class = "main" id = "wrapper">
+<div class = "main" id = "wrapper" style = "z-index: -2">
   <div class="section active" data-anchor="page1" id = "weather">
     <!-- Weather Page Code Here -->
 <!-- Use this button to test JS -->
