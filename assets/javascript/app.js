@@ -5,13 +5,16 @@ $(document).ready(function() {
 $("#test").on("click", function(){
     console.log("ouch");
 });
+// NavBar JS Starts
+//hides the open button
 $("#open").on("click",function(){
   document.getElementById("open").style.zIndex = "-1";
 });
+//pops the open button back up
 $("#closebtn").on("click", function(){
   document.getElementById("openClick").style.zIndex = "0";
 });
-// NavBar JS Starts
+
  // Bump Page Content Over 
 function openNav() {
 
