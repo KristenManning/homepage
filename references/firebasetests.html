@@ -28,6 +28,7 @@ ul li{
 	padding: 1em;
 	float: left;
 	position: relative;
+	margin: 1em;
 }
 ul{
 	overflow: hidden;
@@ -39,6 +40,13 @@ ul li textarea{
 	padding: 3px;
 	border-style: none;
 }
+ul li a{
+	padding: 1px 3px;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 .noteTitle{
 
 }
@@ -49,15 +57,15 @@ ul li textarea{
 
 <body>
   <ul id='display'>
-  	<li>
+  	<li id = "sticky">
   		<textarea class = "noteTitle" placeholder="Title" maxlength="10"></textarea>
   		<textarea class = "noteContent" placeholder="Content"></textarea>
+  		<a href="javascript:void(0)" class = "" id = "closebtn">&times;</a>
   	</li>
-  	
   </ul>
-  <div id='buttons'>
-  <button id = "create">Create</button>
-  <button id = "save">Save</button>
+	<div id='buttons'>
+  	<button id = "create">Create</button>
+  	<button id = "save">Save</button>
   </div>
 </body>
 
@@ -70,7 +78,17 @@ ul li textarea{
     messagingSenderId: "544432373091"
   };
   firebase.initializeApp(config);
-
+  $("#create").on("click", function(){
+  	$("#display").append("<li id = 'sticky'>"+
+  		"<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
+  		"</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
+  		"<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
+  		"</li>");
+  });
+ 	$(document).on("click", "#closebtn", function(){
+ 		$(this).closest("#sticky").remove();
+ 		return false;
+ 	});
 </script>
 
 
