@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #666;
+	margin: 3em;
+	font-size: 100%;
+}
+ul, li{
+	list-style: none;
+}
+ul li{
+	text-decoration: none;
+	color: #000;
+	background: #ffc;
+	display: block;
+	height: 10em;
+	width: 10em;
+	padding: 1em;
+	float: left;
+	position: relative;
+}
+ul{
+	overflow: hidden;
+	padding: 15px;
+}
+ul li textarea{
+	background: rgba(0, 0, 0, 0);
+	resize: none;
+	padding: 3px;
+	border-style: none;
+}
+.noteTitle{
+
+}
+.noteContent{
+
+}
+</style>
+
+<body>
+  <ul id='display'>
+  	<li>
+  		<textarea class = "noteTitle" placeholder="Title" maxlength="10"></textarea>
+  		<textarea class = "noteContent" placeholder="Content"></textarea>
+  	</li>
+  	
+  </ul>
+  <div id='buttons'>
+  <button id = "create">Create</button>
+  <button id = "save">Save</button>
+  </div>
+</body>
+
+<script type='text/javascript'>
+  var config = {
+  	apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
+    authDomain: "testing-everything-here.firebaseapp.com",
+    databaseURL: "https://testing-everything-here.firebaseio.com",
+    storageBucket: "testing-everything-here.appspot.com",
+    messagingSenderId: "544432373091"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+
+
+</html>
