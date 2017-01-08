@@ -78,6 +78,7 @@ ul li a{
     messagingSenderId: "544432373091"
   };
   firebase.initializeApp(config);
+  var database = firebase.database();
   $("#create").on("click", function(){
   	$("#display").append("<li id = 'sticky'>"+
   		"<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
@@ -85,10 +86,26 @@ ul li a{
   		"<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
   		"</li>");
   });
+  $("#save").on("click", function(){
+  	stickies = $("#display").html();
+  	database.ref().push({
+  		stickynotes: stickies
+  	});
+  	console.log(stickies);
+  	return false;
+  });
  	$(document).on("click", "#closebtn", function(){
  		$(this).closest("#sticky").remove();
  		return false;
  	});
+ 	function load (){
+ 		database.ref().on("value", function (snapshot){
+ 			var data = snapshot.val();
+ 			console.log(data);
+ 		});
+ 		
+ 	}
+ 	load();
 </script>
 
 
