@@ -100,7 +100,7 @@ ul li a{
  	});
  	function load (){
  		database.ref().on("value", function (snapshot){
- 			var data = snapshot.val();
+ 			var data = snapshot.keys();
  			console.log(data);
  		});
  		

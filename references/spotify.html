@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  var queryURL: "https://api.spotify.com"
+ $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+ .done(function(response){
+  console.log(response);
+ })
+</script>
+</html>
