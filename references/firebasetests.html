@@ -88,7 +88,7 @@ ul li a{
   });
   $("#save").on("click", function(){
   	stickies = $("#display").html();
-  	database.ref().push({
+  	database.ref("sticky").push({
   		stickynotes: stickies
   	});
   	console.log(stickies);
@@ -99,9 +99,10 @@ ul li a{
  		return false;
  	});
  	function load (){
- 		database.ref().on("value", function (snapshot){
- 			var data = snapshot.keys();
+ 		database.ref("sticky").on("value", function (snapshot){
+ 			var data = snapshot.val();
  			console.log(data);
+      $("#display").html(data.stickynotes);
  		});
  		
  	}

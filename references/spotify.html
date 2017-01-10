@@ -3,17 +3,33 @@
 <head>
   <title></title>
 </head>
+<!-- jquery -->
+  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
 <body>
-
+<div id = "artist"></div>
+<div id = "music"></div>
+<div id = "search">
+  <input type="form" name="songSearch"> Search a song!
+  <button id = "sSButton">Submit</button>
+</div>
 </body>
 <script type="text/javascript">
-  var queryURL: "https://api.spotify.com"
+  var q = "q=castle%20on%20the%20hill&type=track&market=US"
+  // var queryURL= "https://api.spotify.com/v1/tracks"+song+""
+  var queryURL = "https://api.spotify.com/v1/search?"+ q + "";
+  var music = "";
+  var audio = "";
  $.ajax({
         url: queryURL,
         method: "GET"
       })
  .done(function(response){
-  console.log(response);
- })
+  console.log(response.tracks.items[0]);
+  $("#artist").text(response.artists);
+  let music = response.tracks.items[0].artists[0].uri;
+  console.log(music);
+  $("#music").html ("<iframe src='https://embed.spotify.com/?uri="+ music+"' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>");
+ });
+
 </script>
 </html>
