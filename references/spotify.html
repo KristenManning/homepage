@@ -9,14 +9,16 @@
 <div id = "artist"></div>
 <div id = "music"></div>
 <div id = "search">
-  <input type="form" name="songSearch"> Search a song!
+  <input type="form" name="songSearch" id = "songSearch"> Search a song!
   <button id = "sSButton">Submit</button>
 </div>
 </body>
 <script type="text/javascript">
-  var q = "q=castle%20on%20the%20hill&type=track&market=US"
-  // var queryURL= "https://api.spotify.com/v1/tracks"+song+""
-  var queryURL = "https://api.spotify.com/v1/search?"+ q + "";
+  $("#sSButton").on("click", function(){
+  let  q = $("#songSearch").val();
+    console.log(q)
+  var qA = "q=" + q + "&type=track&market=US"
+  var queryURL = "https://api.spotify.com/v1/search?"+ qA + "";
   var music = "";
   var audio = "";
  $.ajax({
@@ -30,6 +32,8 @@
   console.log(music);
   $("#music").html ("<iframe src='https://embed.spotify.com/?uri="+ music+"' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>");
  });
+  });
+
 
 </script>
 </html>
