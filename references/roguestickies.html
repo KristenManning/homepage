@@ -67,7 +67,7 @@ ul li a{
 <script type='text/javascript'>
   var stickobj = {};
   var sticknum = [];
-  var stick = 0;
+  var num = 0;
   var config = {
   	apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
     authDomain: "testing-everything-here.firebaseapp.com",
@@ -78,13 +78,13 @@ ul li a{
   firebase.initializeApp(config);
   var database = firebase.database();
   $("#create").on("click", function(){
-      if (sticknum.indexOf(stick) != -1 ){
+      if (sticknum.indexOf(num) != -1 ){
       stick++; 
       }
-    sticknum.push(stick);
+    sticknum.push(num);
    $("#display").append("<li id = 'sticky'>"+
-      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10' id =' " + stick +"title' >"+
-      "</textarea><textarea class = 'noteContent' placeholder='Content' id =' " + stick +"content'></textarea>"+
+      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10' id =' " + num +"title' >"+
+      "</textarea><textarea class = 'noteContent' placeholder='Content' id =' " + num +"content'></textarea>"+
       "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
       "</li>");
   });
