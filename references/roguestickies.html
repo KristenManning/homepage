@@ -79,7 +79,7 @@ ul li a{
   var database = firebase.database();
   $("#create").on("click", function(){
       if (sticknum.indexOf(num) != -1 ){
-      stick++; 
+      num++; 
       }
     sticknum.push(num);
    $("#display").append("<li id = 'sticky'>"+
