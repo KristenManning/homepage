@@ -65,9 +65,10 @@ ul li a{
 </body>
 
 <script type='text/javascript'>
-  var stickobj = {};
+  var stickArr = [];
   var sticknum = [];
   var num = 0;
+  var notes = $("#display");
   var config = {
   	apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
     authDomain: "testing-everything-here.firebaseapp.com",
@@ -83,26 +84,21 @@ ul li a{
       }
     sticknum.push(num);
    $("#display").append("<li id = 'sticky'>"+
-      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10' id =' " + num +"title' >"+
-      "</textarea><textarea class = 'noteContent' placeholder='Content' id =' " + num +"content'></textarea>"+
+      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
+      "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
       "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
       "</li>");
   });
   $("#save").on("click", function(){
-      if (sticknum.indexOf(stick) != -1 ){
-          for(i=0; i < sticknum.length; i ++){
-          let stick = stickobj;
-          let title ="#"+ i+"title";
-          let titlecall = $(title);
-          console.log(titlecall.val());
-          let content = $("#"+ [i] +"content");
-          console.log(content.val());
-          stick.title= title;
-          stick.content= content;
-    // console.log(stickobj);
-      }
+          notes.find("li").each(function (i, e) {
+            var title = $(e).find("textarea.noteTitle");
+            var content = $(e).find("textarea.noteContent");
+            stickArr.push({Index: i, Title: title.val(), Content: content.val()});
+          });
+          console.log(stickArr);
+          var jsonStr= JSON.stringify(stickArr);
 
-  };
+  });
 
 
   	// for (let entry in display){
@@ -115,8 +111,8 @@ ul li a{
   	// });
   	// // console.log(stickies);
   	// return false;
-  });
- 	$(document).on("click", "#closebtn", function(){
+
+    $(document).on("click", "#closebtn", function(){
  		$(this).closest("#sticky").remove();
  		return false;
  	});
