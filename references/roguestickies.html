@@ -57,11 +57,6 @@ ul li a{
 
 <body>
   <ul id='display'>
-  	<li id = "sticky">
-  		<textarea class = "noteTitle" placeholder="Title" maxlength="10"></textarea>
-  		<textarea class = "noteContent" placeholder="Content"></textarea>
-  		<a href="javascript:void(0)" class = "" id = "closebtn">&times;</a>
-  	</li>
   </ul>
 	<div id='buttons'>
   	<button id = "create">Create</button>
@@ -71,6 +66,8 @@ ul li a{
 
 <script type='text/javascript'>
   var stickobj = {};
+  var sticknum = [];
+  var stick = 0;
   var config = {
   	apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
     authDomain: "testing-everything-here.firebaseapp.com",
@@ -81,15 +78,27 @@ ul li a{
   firebase.initializeApp(config);
   var database = firebase.database();
   $("#create").on("click", function(){
-  	$("#display").append("<li id = 'sticky'>"+
-  		"<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
-  		"</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
-  		"<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
-  		"</li>");
+      if (sticknum.indexOf(stick) != -1 ){
+      stick++; 
+      }
+    sticknum.push(stick);
+    console.log(sticknum);
+   $("#display").append("<li id = 'sticky'>"+
+      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10' id = " + stick +" >"+
+      "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
+      "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
+      "</li>");
   });
   $("#save").on("click", function(){
-    let display = $("#display");
-    console.log(display);
+    let stick = stickobj;
+    let title = $(".noteTitle").val();
+    console.log(title);
+    let content = $(".noteContent").val();
+    console.log(content);
+    stick.title= title;
+    stick.content= content;
+    console.log(stickobj);
+
   	for (let entry in display){
            stickies = $("#display").html();
           console.log(stickies);
