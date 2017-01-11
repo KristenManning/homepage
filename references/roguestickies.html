@@ -97,20 +97,8 @@ ul li a{
           });
           console.log(stickArr);
           var jsonStr= JSON.stringify(stickArr);
-
+          console.log(jsonStr);
   });
-
-
-  	// for (let entry in display){
-   //         stickies = $("#display").html();
-   //        // console.log(stickies);
-   //  }
-
-  	// database.ref("sticky").push({
-  	// 	stickynotes: stickies
-  	// });
-  	// // console.log(stickies);
-  	// return false;
 
     $(document).on("click", "#closebtn", function(){
  		$(this).closest("#sticky").remove();
