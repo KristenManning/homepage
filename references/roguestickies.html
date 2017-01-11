@@ -6,6 +6,7 @@
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
 </head>
+<!-- Style for the Stickies -->
 <style>
 *{
 	margin: 0;
@@ -64,36 +65,32 @@ font-size: 100%;
 font-family: 'Gloria Hallelujah', cursive;
 }
 </style>
-
+<!-- Actual HTML -->
 <body>
+<!-- Where the Stickies Will Be -->
   <ul id='display'>
   </ul>
+<!-- Buttons -->
 	<div id='buttons'>
   	<button id = "create">Create</button>
   	<button id = "save">Save</button>
   </div>
 </body>
-
+<!-- Sticky JS -->
 <script type='text/javascript'>
+// Global Vars
 var stickArr = [];
 var count = 0;
 var notes = $("#display");
-var config = {
-  apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
-  authDomain: "testing-everything-here.firebaseapp.com",
-  databaseURL: "https://testing-everything-here.firebaseio.com",
-  storageBucket: "testing-everything-here.appspot.com",
-  messagingSenderId: "544432373091"
-};
-firebase.initializeApp(config);
-var database = firebase.database();
+// Binding Create Button
 $("#create").on("click", function(){
   $("#display").append("<li id = 'sticky'>"+
       "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
       "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
       "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
       "</li>");
-  });
+});
+// Binding Save Button
 $("#save").on("click", function(){
   event.preventDefault();
   notes.find("li").each(function (i, e) {
@@ -104,12 +101,13 @@ $("#save").on("click", function(){
     var jsonStr= JSON.stringify(stickArr);
     localStorage.setItem("notes", jsonStr);
 
-  });
-
+});
+// Binding Delete Button
 $(document).on("click", "#closebtn", function(){
  	$(this).closest("#sticky").remove();
  	  return false;
  	});
+// Part of Load Function
 function add(title, content){
   notes.append("<li id = 'sticky'>"+
     "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
@@ -125,6 +123,7 @@ function add(title, content){
   }
 
 }
+// Load Old Sticky Notes Function
 function load (){
   var stored= localStorage.getItem("notes");
     if (stored){
@@ -138,7 +137,7 @@ function load (){
       }
     }
 }
-
+// Calling Load Function
 load();
 </script>
 
