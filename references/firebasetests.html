@@ -1,51 +1,51 @@
 <!DOCTYPE>
 <html>
 <head>
-	<title></title>
+  <title></title>
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
 </head>
 <style>
 *{
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body{
-	background: #666;
-	margin: 3em;
-	font-size: 100%;
+  background: #666;
+  margin: 3em;
+  font-size: 100%;
 }
 ul, li{
-	list-style: none;
+  list-style: none;
 }
 ul li{
-	text-decoration: none;
-	color: #000;
-	background: #ffc;
-	display: block;
-	height: 10em;
-	width: 10em;
-	padding: 1em;
-	float: left;
-	position: relative;
-	margin: 1em;
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: block;
+  height: 10em;
+  width: 10em;
+  padding: 1em;
+  float: left;
+  position: relative;
+  margin: 1em;
 }
 ul{
-	overflow: hidden;
-	padding: 15px;
+  overflow: hidden;
+  padding: 15px;
 }
 ul li textarea{
-	background: rgba(0, 0, 0, 0);
-	resize: none;
-	padding: 3px;
-	border-style: none;
+  background: rgba(0, 0, 0, 0);
+  resize: none;
+  padding: 3px;
+  border-style: none;
 }
 ul li a{
-	padding: 1px 3px;
-	margin: 10px;
-	position: absolute;
-	top: 0;
-	right: 0;
+  padding: 1px 3px;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .noteTitle{
 
@@ -57,66 +57,83 @@ ul li a{
 
 <body>
   <ul id='display'>
-  	<li id = "sticky">
-  		<textarea class = "noteTitle" placeholder="Title" maxlength="10"></textarea>
-  		<textarea class = "noteContent" placeholder="Content"></textarea>
-  		<a href="javascript:void(0)" class = "" id = "closebtn">&times;</a>
-  	</li>
   </ul>
-	<div id='buttons'>
-  	<button id = "create">Create</button>
-  	<button id = "save">Save</button>
+  <div id='buttons'>
+    <button id = "create">Create</button>
+    <button id = "save">Save</button>
   </div>
 </body>
 
 <script type='text/javascript'>
-  var stickobj = {};
-  var config = {
-  	apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
-    authDomain: "testing-everything-here.firebaseapp.com",
-    databaseURL: "https://testing-everything-here.firebaseio.com",
-    storageBucket: "testing-everything-here.appspot.com",
-    messagingSenderId: "544432373091"
-  };
-  firebase.initializeApp(config);
-  var database = firebase.database();
-  $("#create").on("click", function(){
-  	$("#display").append("<li id = 'sticky'>"+
-  		"<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
-  		"</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
-  		"<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
-  		"</li>");
+var stickArr = [];
+var count = 0;
+var notes = $("#display");
+var config = {
+  apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
+  authDomain: "testing-everything-here.firebaseapp.com",
+  databaseURL: "https://testing-everything-here.firebaseio.com",
+  storageBucket: "testing-everything-here.appspot.com",
+  messagingSenderId: "544432373091"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+$("#create").on("click", function(){
+  $("#display").append("<li id = 'sticky'>"+
+      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
+      "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
+      "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
+      "</li>");
   });
-  $("#save").on("click", function(){
-    let display = $("#display");
-    console.log(display);
-  	for (let entry in display){
-           stickies = $("#display").html();
-          console.log(stickies);
-    }
+$("#save").on("click", function(){
+  notes.find("li").each(function (i, e) {
+    var title = $(e).find("textarea.noteTitle");
+    var content = $(e).find("textarea.noteContent");
+      stickArr.push({Index: i, Title: title.val(), Content: content.val()});
+    });
+    var jsonStr= JSON.stringify(stickArr);
+    database.ref("sticky").push({
+      stickynotes: jsonStr
+    });
+    return false;
+  });
 
-  	database.ref("sticky").push({
-  		stickynotes: stickies
-  	});
-  	console.log(stickies);
-  	return false;
+$(document).on("click", "#closebtn", function(){
+  $(this).closest("#sticky").remove();
+    return false;
   });
- 	$(document).on("click", "#closebtn", function(){
- 		$(this).closest("#sticky").remove();
- 		return false;
- 	});
- 	function load (){
- 		database.ref("sticky").on("value", function (snapshot){
- 			let data = snapshot.val();
- 			console.log(data);
-      for (let key in data){
-        console.log(key);
-        $("#display").html(key.stickynotes);
+function add(title, content){
+  notes.append("<li id = 'sticky'>"+
+    "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
+    "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
+    "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
+    "</li>");
+  var newNote = notes.find("li:last");
+  if(title){
+    newNote.find("textarea.noteTitle").val(title);
+  }
+  if(content){
+    newNote.find("textarea.noteContent").val(content);
+  }
+
+}
+function load (){
+  database.ref("sticky").on("value", function (snapshot){
+    let data = snapshot.val();
+      console.log(data);
+    if (data){
+      var stickArr = JSON.parse(data);
+      count = notesArray.length
+      console.log(count);
+      var i;
+      for (i=0; i < count; i ++){
+        var stored= stickArr[i];
+        add(stored.Title, stored.Content);
       }
- 		});
- 		
- 	}
- 	load();
+    }
+  }); 
+}
+
+load();
 </script>
 
 

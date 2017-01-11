@@ -65,57 +65,69 @@ ul li a{
 </body>
 
 <script type='text/javascript'>
-  var stickArr = [];
-  var sticknum = [];
-  var num = 0;
-  var notes = $("#display");
-  var config = {
-  	apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
-    authDomain: "testing-everything-here.firebaseapp.com",
-    databaseURL: "https://testing-everything-here.firebaseio.com",
-    storageBucket: "testing-everything-here.appspot.com",
-    messagingSenderId: "544432373091"
-  };
-  firebase.initializeApp(config);
-  var database = firebase.database();
-  $("#create").on("click", function(){
-      if (sticknum.indexOf(num) != -1 ){
-      num++; 
-      }
-    sticknum.push(num);
-   $("#display").append("<li id = 'sticky'>"+
+var stickArr = [];
+var count = 0;
+var notes = $("#display");
+var config = {
+  apiKey: "AIzaSyCTPZCcv_hU6Zb5_VojCfy7mzwPi1kpeLI",
+  authDomain: "testing-everything-here.firebaseapp.com",
+  databaseURL: "https://testing-everything-here.firebaseio.com",
+  storageBucket: "testing-everything-here.appspot.com",
+  messagingSenderId: "544432373091"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+$("#create").on("click", function(){
+  $("#display").append("<li id = 'sticky'>"+
       "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
       "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
       "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
       "</li>");
   });
-  $("#save").on("click", function(){
-          notes.find("li").each(function (i, e) {
-            var title = $(e).find("textarea.noteTitle");
-            var content = $(e).find("textarea.noteContent");
-            stickArr.push({Index: i, Title: title.val(), Content: content.val()});
-          });
-          console.log(stickArr);
-          var jsonStr= JSON.stringify(stickArr);
-          console.log(jsonStr);
+$("#save").on("click", function(){
+  notes.find("li").each(function (i, e) {
+    var title = $(e).find("textarea.noteTitle");
+    var content = $(e).find("textarea.noteContent");
+      stickArr.push({Index: i, Title: title.val(), Content: content.val()});
+    });
+    var jsonStr= JSON.stringify(stickArr);
+    localStorage.setItem("notes", jsonStr);
   });
 
-    $(document).on("click", "#closebtn", function(){
- 		$(this).closest("#sticky").remove();
- 		return false;
+$(document).on("click", "#closebtn", function(){
+ 	$(this).closest("#sticky").remove();
+ 	  return false;
  	});
- 	function load (){
- 		database.ref("sticky").on("value", function (snapshot){
- 			let data = snapshot.val();
- 			// console.log(data);
-      for (let key in data){
-        // console.log(key);
-        $("#display").html(key.stickynotes);
+function add(title, content){
+  notes.append("<li id = 'sticky'>"+
+    "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
+    "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
+    "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
+    "</li>");
+  var newNote = notes.find("li:last");
+  if(title){
+    newNote.find("textarea.noteTitle").val(title);
+  }
+  if(content){
+    newNote.find("textarea.noteContent").val(content);
+  }
+
+}
+function load (){
+  var stored= localStorage.getItem("notes");
+    if (stored){
+      var stickArr = JSON.parse(stored);
+      count = stickArr.length
+      console.log(count);
+      var i;
+      for (i=0; i < count; i ++){
+        var stored= stickArr[i];
+        add(stored.Title, stored.Content);
       }
- 		});
- 		
- 	}
- 	load();
+    }
+}
+
+load();
 </script>
 
 
