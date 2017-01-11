@@ -1,7 +1,8 @@
 <!DOCTYPE>
 <html>
 <head>
-	<title></title>
+	<title>Local Storage Stickies</title>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
 </head>
@@ -17,6 +18,7 @@ body{
 }
 ul, li{
 	list-style: none;
+
 }
 ul li{
 	text-decoration: none;
@@ -29,6 +31,12 @@ ul li{
 	float: left;
 	position: relative;
 	margin: 1em;
+    /* Shadow for Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Shadow for Safari and Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Shadow for Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 ul{
 	overflow: hidden;
@@ -48,10 +56,12 @@ ul li a{
 	right: 0;
 }
 .noteTitle{
-
+font-family: 'Gloria Hallelujah', cursive;
+font-weight: bold;
+font-size: 100%;
 }
 .noteContent{
-
+font-family: 'Gloria Hallelujah', cursive;
 }
 </style>
 
@@ -85,6 +95,7 @@ $("#create").on("click", function(){
       "</li>");
   });
 $("#save").on("click", function(){
+  event.preventDefault();
   notes.find("li").each(function (i, e) {
     var title = $(e).find("textarea.noteTitle");
     var content = $(e).find("textarea.noteContent");
@@ -92,6 +103,7 @@ $("#save").on("click", function(){
     });
     var jsonStr= JSON.stringify(stickArr);
     localStorage.setItem("notes", jsonStr);
+
   });
 
 $(document).on("click", "#closebtn", function(){
