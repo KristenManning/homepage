@@ -82,33 +82,40 @@ ul li a{
       stick++; 
       }
     sticknum.push(stick);
-    console.log(sticknum);
    $("#display").append("<li id = 'sticky'>"+
-      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10' id = " + stick +" >"+
-      "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
+      "<textarea class = 'noteTitle' placeholder='Title' maxlength='10' id =' " + stick +"title' >"+
+      "</textarea><textarea class = 'noteContent' placeholder='Content' id =' " + stick +"content'></textarea>"+
       "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
       "</li>");
   });
   $("#save").on("click", function(){
-    let stick = stickobj;
-    let title = $(".noteTitle").val();
-    console.log(title);
-    let content = $(".noteContent").val();
-    console.log(content);
-    stick.title= title;
-    stick.content= content;
-    console.log(stickobj);
+      if (sticknum.indexOf(stick) != -1 ){
+          for(i=0; i < sticknum.length; i ++){
+          console.log(i);
+          let stick = stickobj;
+          let title ="#"+ i+"title";
+          let titlecall = $(title);
+          console.log(titlecall.val());
+          let content = $("#"+ [i] +"content");
+          console.log(content.val());
+          stick.title= title;
+          stick.content= content;
+    // console.log(stickobj);
+      }
 
-  	for (let entry in display){
-           stickies = $("#display").html();
-          console.log(stickies);
-    }
+  };
 
-  	database.ref("sticky").push({
-  		stickynotes: stickies
-  	});
-  	console.log(stickies);
-  	return false;
+
+  	// for (let entry in display){
+   //         stickies = $("#display").html();
+   //        // console.log(stickies);
+   //  }
+
+  	// database.ref("sticky").push({
+  	// 	stickynotes: stickies
+  	// });
+  	// // console.log(stickies);
+  	// return false;
   });
  	$(document).on("click", "#closebtn", function(){
  		$(this).closest("#sticky").remove();
@@ -117,9 +124,9 @@ ul li a{
  	function load (){
  		database.ref("sticky").on("value", function (snapshot){
  			let data = snapshot.val();
- 			console.log(data);
+ 			// console.log(data);
       for (let key in data){
-        console.log(key);
+        // console.log(key);
         $("#display").html(key.stickynotes);
       }
  		});
