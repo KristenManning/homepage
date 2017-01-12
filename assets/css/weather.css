@@ -1,0 +1,39 @@
+.s1heading{
+	font-style: bold;
+	font-size: 60px;
+	line-height: 80px;
+	text-align: center;
+
+}
+
+.forecast-int-d2{
+	font-style: bold;
+	font-size: 35px;
+	
+}
+
+.forecast-int-d3{
+
+}
+
+.conditions-d2{
+	font-size: 30px;
+	font-style: italic;
+
+}
+
+.conditions-d3{
+	
+}
+
+.temp-d1{
+	
+}
+
+.temp-d2{
+	font-size: 55px;
+}
+
+.temp-d3{
+	
+}
