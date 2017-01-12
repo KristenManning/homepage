@@ -12,7 +12,7 @@ $(document).ready(function() {
 		  $(".s2a").append("<div class='row'><div class='col-md-10'></div> <div class='col-md-12'><h2>" + topic1 + "</h2></div></div>")
 		  for (var i = 0; i <2; i++) {
 		    var current_result = result.results[i]
-		    $(".s2a").append("<div class='row'><div class='col-md-2'> <img src="+current_result.multimedia[0].url+"></div><div class='col-md-10'> <b> <a href="+ current_result.url + ">" + current_result.title + "</a></b><br>" + current_result.byline + "<br><i>" + current_result.abstract + "</i><br><br></div></div>")
+		    $(".s2a").append("<div class='row'><div class='col-md-1'> <img src="+current_result.multimedia[0].url+"></div><div class='col-md-10'> <b> <a href="+ current_result.url + ">" + current_result.title + "</a></b><br>" + current_result.byline + "<br><i>" + current_result.abstract + "</i><br><br></div></div>")
 		  }
 		  
 		  }).fail(function(err) {
