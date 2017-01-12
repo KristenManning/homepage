@@ -14,10 +14,9 @@ p{
 }
 /*These are placeholders until we decide on what stylizing we want*/
 #weather{
- background-image: url("https://images4.alphacoders.com/710/thumb-1920-71068.jpg") ;
-}
+ background-color: white;}
 #news{
-  background-image: url("https://newevolutiondesigns.com/images/freebies/cat-wallpaper-16.jpg");
+ background-color: black;
 }
 #toDo{
 }
@@ -127,3 +126,55 @@ font-size: 100%;
 font-family: 'Gloria Hallelujah', cursive;
 }
 /*End Sticky Note CSS*/
+
+/*Begin News CSS*/
+
+
+.btn-lg{
+  color: white;
+}
+
+.topic-buttons{
+  text-align: center;
+}
+
+a{
+  color: #2B2B2B;
+}
+.s2a, .s2b, .s2c, .s2d{
+  color: white;
+}
+
+.politics, #politics{
+  background-color: #4B3566;
+}
+
+.business, #business{
+  background-color: #4C8A5D;
+}
+
+.sports, #sports{
+  background-color: #69403C;
+}
+
+.arts, #arts{
+  background-color: #284769;
+}
+
+.opinion, #opinion{
+  background-color: #46692A;
+}
+
+.world, #world{
+  background-color: #344182;
+}
+
+.technology, #technology{
+  background-color: #82723F;
+}
+
+
+
+
+
+
