@@ -69,6 +69,27 @@ p{
     #sidenav a {font-size: 18px;}
 }
 /*Nav Bar CSS ends*/
+/*Music CSS Begins*/
+#musicbox{    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }    
+#musicbox #closebtn {
+  position: absolute;;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+/*Music CSS Ends*/
 /*Sticky Note CSS Begins*/
 *{
   margin: 0;

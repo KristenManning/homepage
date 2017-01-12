@@ -61,8 +61,9 @@
 </div>
 <!-- Side Nav Code Ends Here -->
 <!-- Music Code Starts Here -->
-<div style = "position: absolute; z-index: 0; right:0px; margin-right: 1.5em; margin-top: 1.5em;" class = "" id = "music">
-  <div id = "music">Spotify Play List Here</div>
+<div style = "position: absolute; z-index: 0; right:0px; margin-right: 1.5em; margin-top: 1.5em;" class = "" id = "musicbox">
+  <a href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeMusic()">&times;</a>
+  <div id = "music"></div>
   <div id = "search">
     <input type="form" name="songSearch" id = "songSearch"> Search a song!
     <button id = "sSButton">Submit</button>
@@ -73,13 +74,17 @@
 <div class = "" id ="openClick">
   <span style="color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer; margin-left: 0.6em;" onclick="openNav()" class = "home" id = "open">&#9776;</span>
 </div>
+<!-- End Open Side Nav Button -->
+<!-- Open Music Button -->
+<div class = "" id ="openMusic">
+  <span style="right: 0px; color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer; margin-right: 0.6em;" onclick="openMusic()" class = "home" id = "open">&#9835;</span>
+</div>
+<!-- End Open Music Button -->
 <!-- Keep all the webpage contents within this div -->
 <div class = "main" id = "wrapper" style = "z-index: -2">
   <div class="section active" data-anchor="page1" id = "weather">
 
     <!-- Weather Page Code Here -->
-
-    <p class = "" id = "">WEATHER</p>
     <div class="s1">
       
     </div>
