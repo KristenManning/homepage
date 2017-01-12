@@ -12,16 +12,14 @@ h3{
 
 p{
 }
-/*These are placeholders until we decide on what stylizing we want*/
 #weather{
- background-color: white;}
-#news{
- background-color: black;
+ background-image: url("../images/cloudy.jpg");
 }
-#toDo{
+#news{
+ background-image: url("../images/news.jpg");
 }
 #transit{
-  background-image: url("http://www.desktopwallpaperhd.net/wallpapers/2/b/cat-wallpaper-background-napper-funny-desktop-kitty-26779.jpg");
+  background-image: url("../images/transit.png");
 }
 /*All Nav Bar CSS*/
 /*Nav Bar Itself when it pops*/
@@ -83,7 +81,7 @@ p{
     padding-top: 60px;
   }    
 #musicbox #closebtn {
-  position: absolute;;
+  position: absolute;
   top: 0;
   left: 25px;
   font-size: 36px;
@@ -96,7 +94,7 @@ p{
   padding: 0;
 }
 #toDo{
-  background: #666;
+  background-image: url("../images/notes.png");
   font-size: 100%;
 }
 #toDo ul, #toDo li{
@@ -160,38 +158,38 @@ font-family: 'Gloria Hallelujah', cursive;
 }
 
 a{
-  color: #2B2B2B;
+  color: black;
 }
 .s2a, .s2b, .s2c, .s2d{
-  color: white;
+  color: black;
 }
 
 .politics, #politics{
-  background-color: #4B3566;
+  background-color: #ed1e24;
 }
 
 .business, #business{
-  background-color: #4C8A5D;
+  background-color: #02b801;
 }
 
 .sports, #sports{
-  background-color: #69403C;
+  background-color: #ffa600;
 }
 
 .arts, #arts{
-  background-color: #284769;
+  background-color: #8b20bb;
 }
 
 .opinion, #opinion{
-  background-color: #46692A;
+  background-color: #ec197a;
 }
 
 .world, #world{
-  background-color: #344182;
+  background-color: #0024ba;
 }
 
 .technology, #technology{
-  background-color: #82723F;
+  background-color: #f4eb20;
 }
 
 
