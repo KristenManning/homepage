@@ -22,7 +22,7 @@
   <script type="text/javascript" src="assets/javascript/app.js"></script>
   <script type="text/javascript" src="assets/javascript/news.js"></script>
   <script type="text/javascript" src="assets/javascript/weather.js"></script>
-    <script type="text/javascript" src="assets/javascript/toDo.js"></script>
+
   <script type="text/javascript">$(document).ready(function() { MultiScreen.init(); });</script>
 </head>
 <body>
@@ -55,24 +55,29 @@
       <a href = "#page4" class = "" id = "">
         <label>Transit</label>
       </a>
-    </ul>            
+    </ul>
 </div>
 <!-- Side Nav Code Ends Here -->
+<!-- Music Code Starts Here -->
+<div class = "" id = "music">
+  <div id = "artist">Artist Name Here</div>
+  <div id = "music">Spotify Play List Here</div>
+  <div id = "search">
+    <input type="form" name="songSearch" id = "songSearch"> Search a song!
+    <button id = "sSButton">Submit</button>
+  </div>
+</div>
+<!-- Music Code Ends Here -->
 <!-- Open Side Nav Button -->
 <div class = "" id ="openClick">
-  <span style="color: yellow; position: absolute; z-index: 0; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776;CLICK ME</span>
+  <span style="color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer" onclick="openNav()" class = "home" id = "open">&#9776;</span>
 </div>
 <!-- Keep all the webpage contents within this div -->
 <div class = "main" id = "wrapper" style = "z-index: -2">
   <div class="section active" data-anchor="page1" id = "weather">
 
-   
-
     <!-- Weather Page Code Here -->
-<!-- Use this button to test JS -->
-    <div class= "home" id = "button">
-      <button class = "btn btn-primary" id = "test">TEST</button>
-    </div>
+
     <p class = "" id = "">WEATHER</p>
     <div class="s1">
       
@@ -85,6 +90,10 @@
     <p class="" id = >NEWS</p>
   </div>  
   <div class = "section" data-anchor="page3" id = "toDo">
+  <!-- Use this button to test JS -->
+    <div class= "home" id = "button">
+      <button class = "btn btn-primary" id = "test">TEST</button>
+    </div>
    <!-- Where the Stickies Will Be -->
     <ul id='display'>
     </ul>
@@ -93,76 +102,6 @@
       <button id = "create">Create</button>
       <button id = "save">Save</button>
     </div>
-  <script type='text/javascript'>
-// Global Vars
-    var stickArr = [];
-    var count = 0;
-    var notes = $("#display");
-    // Binding Create Button
-    $("#create").on("click", function(){
-      // Append to the Sticky Note Display
-      $("#display").append("<li id = 'sticky'>"+
-          "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
-          "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
-          "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
-          "</li>");
-    });
-    // Binding Save Button
-    $("#save").on("click", function(event){
-      // Preventing Double Clicking
-      event.preventDefault();
-      // Searching through each sticky note and grabbing data
-      notes.find("li").each(function (i, e) {
-        var title = $(e).find("textarea.noteTitle");
-        var content = $(e).find("textarea.noteContent");
-          stickArr.push({Index: i, Title: title.val(), Content: content.val()});
-        });
-        // Saving the Data
-      var jsonStr= JSON.stringify(stickArr);
-      localStorage.setItem("notes", jsonStr);
-
-    });
-    // Binding Delete Button
-    $(document).on("click", "#closebtn", function(){
-      $(this).closest("#sticky").remove();
-        return false;
-      });
-    // Part of Load Function
-    function add(title, content){
-      // Add notes
-      notes.append("<li id = 'sticky'>"+
-        "<textarea class = 'noteTitle' placeholder='Title' maxlength='10'>"+
-        "</textarea><textarea class = 'noteContent' placeholder='Content'></textarea>"+
-        "<a href='javascript:void(0)' class = '' id = 'closebtn' onclick= 'close()' >&times;</a>"+
-        "</li>");
-      // Parse through saved data
-      var newNote = notes.find("li:last");
-      if(title){
-        newNote.find("textarea.noteTitle").val(title);
-      }
-  if(content){
-    newNote.find("textarea.noteContent").val(content);
-  }
-
-}
-// Load Old Sticky Notes Function
-    function load (){
-      // Get data from local Storage
-      var stored= localStorage.getItem("notes");
-      // Store the data into a an Array
-        if (stored){
-          var stickArr = JSON.parse(stored);
-          count = stickArr.length
-          var i;
-          for (i=0; i < count; i ++){
-            var stored= stickArr[i];
-            add(stored.Title, stored.Content);
-          }
-        }
-    }
-// Calling Load Function
-    load();
-    </script>
   </div>
 
   <div class = "section" data-anchor="page4" id = "transit">
@@ -178,6 +117,8 @@
 
 
 </body>
+<script type="text/javascript" src="assets/javascript/toDo.js"></script>
+<script type="text/javascript" src="assets/javascript/music.js"></script>
 </html>
 
 
