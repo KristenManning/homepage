@@ -14,6 +14,8 @@ console.log("hello!")
     });
     // Binding Save Button
     $("#save").on("click", function(event){
+      localStorage.clear();
+      stickArr = []
       // Preventing Double Clicking
       event.preventDefault();
       // Searching through each sticky note and grabbing data
