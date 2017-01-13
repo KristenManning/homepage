@@ -3,6 +3,7 @@
 var lat;
 var lon;
 
+
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: lat, lng: lon},
@@ -24,6 +25,7 @@ function initMap() {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            design2(pos);
 
             lat= pos.lat;
             lon= pos.lng;
