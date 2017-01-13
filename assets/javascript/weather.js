@@ -1,6 +1,6 @@
 var city = "New York, NY"
-var lat = 40.7128
-var lon = 74.0059
+var lat = 40.5354340
+var lon = -74.5212870
 var weather_url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&mode=json&APPID=7339d8215d69c41b505afbebf91a1097"
 
 var design1 = function(){

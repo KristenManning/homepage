@@ -21,11 +21,13 @@
 <!-- custom stylesheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/weather.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/news.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/transit.css">
 <!-- javascript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
   <script type="text/javascript" src="assets/javascript/news.js"></script>
   <script type="text/javascript" src="assets/javascript/weather.js"></script>
-
+<script type="text/javascript" src="assets/javascript/transit.js"></script>
   <script type="text/javascript">$(document).ready(function() { MultiScreen.init(); });</script>
 </head>
 <body>
@@ -149,11 +151,11 @@
         </div>
         <div class="col-md-10">
           <div class="row"  >
-            <div style= "padding: 0px;" class="col-md-10 s2a">
+            <div style= "padding: 0px;" class="col-md-10 s2a" id="technology">
             </div>
           </div>
           <div class="row" >
-            <div style = "float: left; padding: 0px;" class="col-md-5 s2b id="technology">
+            <div style = "float: left; padding: 0px;" class="col-md-5 s2b">
             </div>
             <div style= "float: right; padding: 0px;" class="col-md-5 s2c">
             </div>
@@ -187,7 +189,23 @@
 
   <div class = "section" data-anchor="page4" id = "transit">
     <!-- Transit Code Here -->
-    <p class = "" id = "">TRANSIT</p>
+    <input id="origin-input" class="controls" type="text"
+        placeholder="Enter an origin location">
+
+    <input id="destination-input" class="controls" type="text"
+        placeholder="Enter a destination location">
+
+    <div id="mode-selector" class="controls">
+      <input type="radio" name="type" id="changemode-walking" checked="checked">
+      <label for="changemode-walking">Walking</label>
+
+      <input type="radio" name="type" id="changemode-transit">
+      <label for="changemode-transit">Transit</label>
+
+      <input type="radio" name="type" id="changemode-driving">
+      <label for="changemode-driving">Driving</label>
+    </div>
+    <div id="map"></div>
   </div>
 </div>
 </div>
