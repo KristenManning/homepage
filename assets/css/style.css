@@ -44,14 +44,14 @@ p{
 }
 /*All Nav Bar CSS*/
 /*Nav Bar Itself when it pops*/
-#sidenav {
+#sidenav , #musicbox {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #fff;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -61,7 +61,7 @@ p{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #111;
   display: block;
   transition: 0.3s
 }
@@ -70,7 +70,7 @@ p{
     color: #f1f1f1;
 }
 /*CSS to close button*/
-#sidenav #closebtn {
+#sidenav #closebtn  {
     position: absolute;
     top: 0px;
     right: 25px;
@@ -89,25 +89,23 @@ p{
 }
 /*Nav Bar CSS ends*/
 /*Music CSS Begins*/
-#musicbox{    
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }    
-#musicbox #closebtn {
-  position: absolute;
-  top: 0px;
-  left: 25px;
-  font-size: 36px;
-  margin-right: 50px;
+#musicbox #closebtn{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 36px;
+    margin-left: 13px;
 }
+#songSearchText{
+  margin-left: 13px;
+}  
+#songSearch{
+  margin-left: 13px;
+}
+#sSButton{
+  margin-left: 13px;
+}
+
 /*Music CSS Ends*/
 /*Sticky Note CSS Begins*/
 *{
@@ -115,7 +113,7 @@ p{
   padding: 0;
 }
 #toDo{
-  background-image: url("../images/notes.png");
+  background-image: url("../images/notes.jpg");
   font-size: 100%;
 }
 #toDo ul, #toDo li{
@@ -164,6 +162,16 @@ font-size: 100%;
 }
 .noteContent{
 font-family: 'Gloria Hallelujah', cursive;
+}
+#create{
+margin-left: 50px;
+position: absolute;
+top: 5px;
+}
+#save{
+margin-left: 140px;
+position: absolute;
+top: 5px;
 }
 /*End Sticky Note CSS*/
 

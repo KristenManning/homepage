@@ -14,6 +14,6 @@ $("#sSButton").on("click", function(){
 $("#artist").text(response.artists);
   let music = response.tracks.items[0].artists[0].uri;
   console.log(music);
-$("#music").html ("<iframe src='https://embed.spotify.com/?uri="+ music+"' width='240' height='320' frameborder='0' allowtransparency='true'></iframe>");
+$("#music").html ("<iframe src='https://embed.spotify.com/?uri="+ music+"' width='200' height='320' frameborder='0' allowtransparency='true'></iframe>");
  });
   });

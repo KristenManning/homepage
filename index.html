@@ -70,19 +70,21 @@
   <a style = "" href="javascript:void(0)" class = "" id = "closebtn" onclick= "closeMusic()">&times;</a>
   <div style = "margin-left: 1em;" id = "music"></div>
   <div id = "search">
-    <input type="form" name="songSearch" id = "songSearch"> Search a song!
-    <button id = "sSButton">Submit</button>
+    <p id = "songSearchText"> Search a Song :</p>
+    <input type="form" name="songSearch" id = "songSearch">
+    <br>
+    <button class = "btn btn-default" id = "sSButton">Submit</button>
   </div>
 </div>
 <!-- Music Code Ends Here -->
 <!-- Open Side Nav Button -->
 <div class = "" id ="openClick">
-  <span style="color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer; margin-left: 0.6em;" onclick="openNav()" class = "home" id = "open">&#9776;</span>
+  <span style="color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer; margin-left: 0.7em;" onclick="openNav()" class = "home" id = "open">&#9776;</span>
 </div>
 <!-- End Open Side Nav Button -->
 <!-- Open Music Button -->
 <div class = "" id ="openMusic">
-  <span style="right: 0px; color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer; margin-right: 0.6em;" onclick="openMusic()" class = "home" id = "open">&#9835;</span>
+  <span style="top: 855px; left: 0px; color: black; position: absolute; z-index: 0; font-size:30px;cursor:pointer; margin-left: 0.7em;" onclick="openMusic()" class = "home" id = "open">&#9835;</span>
 </div>
 <!-- End Open Music Button -->
 <!-- Keep all the webpage contents within this div -->
@@ -199,8 +201,8 @@
     </ul>
   <!-- Buttons -->
     <div id='buttons'>
-      <button id = "create">Create</button>
-      <button id = "save">Save</button>
+      <button class = "btn btn-success" id = "create">Create</button>
+      <button class = "btn btn-success" id = "save">Save</button>
     </div>
   </div>
 

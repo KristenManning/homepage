@@ -18,8 +18,8 @@ $("#closebtn").on("click", function(){
  // Bump Page Content Over 
 function openNav() {
 
-  document.getElementById("sidenav").style.width = "250px";
-  document.getElementById("wrapper").style.marginLeft = "250px";
+  document.getElementById("sidenav").style.width = "200px";
+  document.getElementById("wrapper").style.marginLeft = "200px";
 }
 
  // Bump Page 
@@ -39,10 +39,10 @@ $("#closebtn").on("click", function(){
 });
 
 function openMusic(){
-  document.getElementById("musicbox").style.width = "250px";
-  document.getElementById("wrapper").style.marginRight = "250px";
+  document.getElementById("musicbox").style.width = "200px";
+  document.getElementById("wrapper").style.marginLeft = "200px";
 }
 function closeMusic() {
   document.getElementById("musicbox").style.width = "0";
-  document.getElementById("wrapper").style.marginRight = "0";
+  document.getElementById("wrapper").style.marginLeft = "0";
 }
