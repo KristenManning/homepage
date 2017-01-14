@@ -1,10 +1,22 @@
 body{ 
 }
 
-h1{
+h1{ 
+  color: white;
+  text-align: center;
+  font-size: 88px;
+  line-height: 92px;
+  font-weight: bolder;
+  font-family: 'Merriweather', serif;
 }
 
 h2{
+  color: white;
+  text-align: center;
+  font-size: 66px;
+  line-height: 70px;
+  font-family: 'Merriweather', serif;
+
 }
 
 h3{
@@ -12,12 +24,21 @@ h3{
 
 p{
 }
+
+
 #weather{
- background-image: url("../images/cloudy.jpg");
+ background: url("../images/rainbow.jpg") no-repeat 50% 50% fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+
 }
 #news{
- background-image: url("../images/news.jpg");
+  background-image: url("../images/desk.jpg");
+  background-size: 100%;
 }
+
 #transit{
   background-image: url("../images/transit.png");
 }
@@ -37,7 +58,7 @@ p{
 }
 /*Adding css to actual material in Nav Bar*/
 #sidenav ul a label {
-	padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -58,7 +79,7 @@ p{
 }
 /*More Animation*/
 .main{
-	transition: margin-left .5s;
+  transition: margin-left .5s;
   padding: 20px;
 }
 /*Accounting for Phone Screens*/

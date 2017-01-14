@@ -23,6 +23,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/weather.css">
   <link rel="stylesheet" type="text/css" href="assets/css/news.css">
   <link rel="stylesheet" type="text/css" href="assets/css/transit.css">
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather|Pacifico|Playfair+Display" rel="stylesheet">
 <!-- javascript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
   <script type="text/javascript" src="assets/javascript/news.js"></script>
@@ -86,129 +88,116 @@
 <!-- Keep all the webpage contents within this div -->
 <div class = "main" id = "wrapper" style = "z-index: -2">
   <div class="section active" data-anchor="page1" id = "weather">
-
     <!-- Weather Page Code Here -->
     <div class="row">
-      
-      <div class="row">
-        <div class="col-md-2">
-        </div>
+      <h1>Local Weather</h1>
+    </div>
 
-        <div class = "col-md-8 s1heading">
-        Retrieving your local weather data ... 
-        <br>
-        </div>
+    <div class="row"> 
+      <div class="col-md-2">
       </div>
 
-      <div class="row"> 
-        <div class="col-md-2">
+      <div class = "col-md-8 s1"> 
+        <div class="s1a"> 
+          <table class="table">
+            <thead>
+              <tr id="time">
+                <th >Now</th>
+                <th></th>
+
+                <th>In 3 Hours</th>
+                <th></th>
+                <th>In 6 Hours</th>
+                <th></th>
+                <th>In 9 Hours</th>
+                <th></th>
+                <th>In 12 Hours</th>
+                <th></th>
+                <th>In 15 Hours</th>
+                <th></th>
+                <th>In 18 Hours</th>
+                <th></th>
+                <th>In 21 Hours</th>
+                <th></th>
+                <th>In 24 Hours</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="conditions">
+              </tr>
+              <tr id="temps">
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-        <div class = "col-md-8 s1"> 
-          <div class="row s1a"> 
-            <table class="table">
-              <thead>
-                <tr id="time">
-                  <th >Now</th>
-                  <th></th>
-
-                  <th>In 3 Hours</th>
-                  <th></th>
-                  <th>In 6 Hours</th>
-                  <th></th>
-                  <th>In 9 Hours</th>
-                  <th></th>
-                  <th>In 12 Hours</th>
-                  <th></th>
-                  <th>In 15 Hours</th>
-                  <th></th>
-                  <th>In 18 Hours</th>
-                  <th></th>
-                  <th>In 21 Hours</th>
-                  <th></th>
-                  <th>In 24 Hours</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr id="conditions">
-                </tr>
-                <tr id="temps">
-                </tr>
-              </tbody>
-            </table>
-
-          </div>
-        </div>
-
-        
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+
+      <div class = "col-md-8 s1heading">
+        Retrieving your local weather data ... 
+        <br>
+      </div>
+    </div>
+
+
   </div>
   
 
- <div class = "section" data-anchor="page2" id = "news">
-    <div class="s2">
-    <br><br>
-      <div class="row">
-        <div style = "float:left; " class="col-md-offset-1 topic-buttons">
-        <!-- This div is just a bunch of buttons at the top  -->
-          <button class = "btn-lg politics topic" data-topic="politics">Politics</button>
-          &nbsp;
-          <button class = "btn-lg business topic" data-topic="business">Business</button>
-          &nbsp;
-          <button class = "btn-lg sports topic" data-topic="sports">Sports</button>
-          &nbsp;
-          <button class = "btn-lg arts topic" data-topic="arts">Arts</button>
-          &nbsp;
-          <button class = "btn-lg opinion topic" data-topic="opinion">Opinion</button>
-          &nbsp;
-          <button class = "btn-lg world topic" data-topic="world">World</button>
-          &nbsp;
-          <button class = "btn-lg technology topic" data-topic="technology">Technology</button>
-          <br><br>
+  <div class = "section" data-anchor="page2" id = "news">
+
+    <div class = "row">
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-10">
+        <div class="row"  >
+          <div style= "padding: 0px;" class="col-md-10 s2a" id="technology">
+          </div>
+        </div>
+
+        <div class="row" >
+          <div style = "float: left; padding: 0px;" class="col-md-5 s2b">
+          </div>
+          <div style= "float: right; padding: 0px;" class="col-md-5 s2c">
+          </div>
         </div>
       </div>
-  <div class = "row">
-    <div class = "col-md-12">
-      <br><br>
     </div>
-  </div> 
-      <div class = "row">
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-10">
-          <div class="row"  >
-            <div style= "padding: 0px;" class="col-md-10 s2a" id="technology">
-            </div>
-          </div>
-          <div class="row" >
-            <div style = "float: left; padding: 0px;" class="col-md-5 s2b">
-            </div>
-            <div style= "float: right; padding: 0px;" class="col-md-5 s2c">
-            </div>
-          </div>
-          <div class="row"  >
-         
-          </div>
-     
-<!--           <div class="row">
-            <div class="col-md-11 s2d">
-            </div>
-          </div> -->
-        </div>
+
+    <div class="row">
+      <div style = "float:left; " class="col-md-offset-1 topic-buttons">
+      <!-- This div is just a bunch of buttons at the top  -->
+        <button class = "btn-lg politics topic" data-topic="politics">Politics</button>
+        &nbsp;
+        <button class = "btn-lg business topic" data-topic="business">Business</button>
+        &nbsp;
+        <button class = "btn-lg sports topic" data-topic="sports">Sports</button>
+        &nbsp;
+        <button class = "btn-lg arts topic" data-topic="arts">Arts</button>
+        &nbsp;
+        <button class = "btn-lg opinion topic" data-topic="opinion">Opinion</button>
+        &nbsp;
+        <button class = "btn-lg world topic" data-topic="world">World</button>
+        &nbsp;
+        <button class = "btn-lg technology topic" data-topic="technology">Technology</button>
       </div>
-  </div>  
-</div>
+    </div>
+   
+  </div>
+
   <div class = "section" data-anchor="page3" id = "toDo">
   <!-- Use this button to test JS -->
-    <div class= "home" id = "button">
+  <!--   <div class= "home" id = "button">
       <button class = "btn btn-primary" id = "test">TEST</button>
-    </div>
+    </div> -->
    <!-- Where the Stickies Will Be -->
     <ul id='display'>
     </ul>
-<!-- Buttons -->
+  <!-- Buttons -->
     <div id='buttons'>
       <button id = "create">Create</button>
       <button id = "save">Save</button>
@@ -216,7 +205,7 @@
   </div>
 
   <div class = "section" data-anchor="page4" id = "transit">
-    <!-- Transit Code Here -->
+      <!-- Transit Code Here -->
     <input id="origin-input" class="controls" type="text"
         placeholder="Enter an origin location">
 

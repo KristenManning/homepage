@@ -1,4 +1,4 @@
-  
+ 
 
   var city;
   var weather_url;
@@ -16,7 +16,7 @@
         faren_temps.push(faren)
       }
 
-      $(".s1heading").html("Location: " + city + "<br>");
+      $(".s1heading").html("<h2>" + city + "</h2>");
 
       $("#conditions").html()
       $('#conditions').append("<td>" + result.list[0].weather[0].description + " </td> <td></td> " + "<td>" + result.list[1].weather[0].description + " </td> <td></td>" + "<td>" + result.list[2].weather[0].description + " </td> <td></td>" + "<td>" + result.list[3].weather[0].description + " </td> <td></td>" + "<td>" + result.list[4].weather[0].description + " </td> <td></td>" + "<td>" + result.list[5].weather[0].description + " </td> <td></td>" + "<td>" + result.list[6].weather[0].description + " </td> <td></td>" + "<td>" + result.list[7].weather[0].description + " </td> <td></td>" + "<td>" + result.list[8].weather[0].description + " </td> <td></td>")

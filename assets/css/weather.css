@@ -12,6 +12,8 @@
 	width: 65%;
 	border: solid;
 	border-color: black;
+	background-color: #6FA7CC; 
+	color: black;
 }
 
 #time, #conditions, #temps{
