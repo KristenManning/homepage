@@ -85,6 +85,7 @@ function initMap() {
         this.directionsService = new google.maps.DirectionsService;
         this.directionsDisplay = new google.maps.DirectionsRenderer;
         this.directionsDisplay.setMap(map);
+        this.directionsDisplay.setPanel(document.getElementById('right-panel'));
 
         var originAutocomplete = new google.maps.places.Autocomplete(
             originInput, {placeIdOnly: true});
@@ -148,7 +149,7 @@ function initMap() {
           travelMode: this.travelMode
         }, function(response, status) {
           if (status === 'OK') {
-            debugger;
+           
             me.directionsDisplay.setDirections(response);
           } else {
             window.alert('Directions request failed due to ' + status);
