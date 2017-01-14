@@ -211,4 +211,16 @@ top: 5px;
   margin-top: 500px;
 }
 }
+@media screen and (max-width: 768px) {
+  #landingText{
+
+  margin-top: 300px;
+
+}
+#enterPage{
+
+  margin-top: 400px;
+}
+}
+
 /*/
