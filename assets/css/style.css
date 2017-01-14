@@ -35,7 +35,7 @@ p{
   margin-left: 50px;
   position: absolute;
   top: 0px;
-  margin-top: 500px;
+  margin-top: 550px;
   color: black;
   font-family: 'Overpass Mono', monospace;
 }
@@ -43,7 +43,7 @@ p{
   position: absolute;
   top: 0px;
   font-size: 50px;
-  margin-top: 600px;
+  margin-top: 650px;
   color: black;
   margin-left: 50px;
   font-family: 'Overpass Mono', monospace;
@@ -199,4 +199,15 @@ top: 5px;
 /*End Sticky Note CSS*/
 
 /*Responsive CSS*/
+@media screen and (max-height: 1000px) {
+  #landingText{
+
+  margin-top: 400px;
+
+}
+#enterPage{
+
+  margin-top: 500px;
+}
+}
 /*/
