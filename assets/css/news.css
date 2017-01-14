@@ -1,5 +1,6 @@
-.btn-lg{
+.btn{
   color: white;
+  font-weight: bold;
 }
 
 .topic-buttons{
@@ -7,38 +8,42 @@
 }
 
 a{
-  color: black;
+  color: #BEE5FF;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
 }
 .s2a, .s2b, .s2c, .s2d{
-  color: black;
+  color: white;
+  opacity: 0.95;
+  margin: 1%;
 }
 
 .politics, #politics{
-  background-color: #ed1e24;
+  background-color: #345C4F;
 }
 
 .business, #business{
-  background-color: #02b801;
+  background-color: #c19a66;
 }
 
 .sports, #sports{
-  background-color: #ffa600;
+  background-color: #5E4859;
 }
 
 .arts, #arts{
-  background-color: #8b20bb;
+  background-color: #854534;
 }
 
 .opinion, #opinion{
-  background-color: #ec197a;
+  background-color: #003753;
 }
 
 .world, #world{
-  background-color: #0024ba;
+  background-color: #4F783A;
 }
 
 .technology, #technology{
-  background-color: #f4eb20;
+  background-color: #5E2045;
 }
 
 

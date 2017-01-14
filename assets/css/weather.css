@@ -12,7 +12,8 @@
 	width: 65%;
 	border: solid;
 	border-color: black;
-	background-color: #fff;
+	background-color: white; 
+	opacity: 0.7;
 	color: black;
 }
 
