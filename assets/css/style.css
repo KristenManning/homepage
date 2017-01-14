@@ -33,11 +33,17 @@ p{
 #landingText{
   font-size: 64px;
   margin-left: 50px;
+  position: absolute;
+  top: 0px;
+  margin-top: 500px;
   color: black;
   font-family: 'Overpass Mono', monospace;
 }
 #enterPage{
+  position: absolute;
+  top: 0px;
   font-size: 50px;
+  margin-top: 600px;
   color: black;
   margin-left: 50px;
   font-family: 'Overpass Mono', monospace;
