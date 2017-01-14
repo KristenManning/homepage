@@ -23,8 +23,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css/weather.css">
   <link rel="stylesheet" type="text/css" href="assets/css/news.css">
   <link rel="stylesheet" type="text/css" href="assets/css/transit.css">
+
 <!-- google fonts -->
 <link href="https://fonts.googleapis.com/css?family=Merriweather|Pacifico|Playfair+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
 <!-- javascript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
   <script type="text/javascript" src="assets/javascript/news.js"></script>
@@ -35,8 +37,12 @@
 <body>
 <!-- Landing Page -->
   <div class="container ms-container ms-default" id = "landing">
-    <p class = "" id = "landingText">WELCOME</p>
-   <a class="ms-nav-link" id = "enterPage" data-ms-target="home" data-ms-animation = "fadetop" href="javascript:void(0)">link</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+    <p class = "" id = "landingText">Hello there,</p>
+   <a class="ms-nav-link" id = "enterPage" data-ms-target="home" data-ms-animation = "fadetop" href="javascript:void(0)"> What will you be doing today?</a>
   </div>
 
 <div class = "ms-container" id = "home">
@@ -224,6 +230,7 @@
       <input type="radio" name="type" id="changemode-driving">
       <label for="changemode-driving">Driving</label>
     </div>
+    <div class = "col-md-1 col-sm-1" id = "blank"></div>
     <div id="map" class="col-md-8 col-sm-8"></div>
     <div id="right-panel" class="col-md-3 col-sm-3"></div>
   </div>
@@ -232,6 +239,7 @@
 </body>
 <script type="text/javascript" src="assets/javascript/toDo.js"></script>
 <script type="text/javascript" src="assets/javascript/music.js"></script>
+<script type="text/javascript" src="assets/javascript/landingpage.js"></script>
 <script async defer
  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaXdrdsVB0z1e1-csJi_i9IWJH__wRC58&callback=initMap&libraries=places">
    </script>

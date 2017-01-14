@@ -1,4 +1,10 @@
 body{ 
+      background: url("../images/landing.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 100%;
+  min-width: 1024px;
 }
 
 h1{ 
@@ -24,14 +30,25 @@ h3{
 
 p{
 }
+#landingText{
+  font-size: 64px;
+  margin-left: 50px;
+  color: black;
+  font-family: 'Overpass Mono', monospace;
+}
+#enterPage{
+  font-size: 50px;
+  color: black;
+  margin-left: 50px;
+  font-family: 'Overpass Mono', monospace;
+}
+#landing{
 
+}
 
 #weather{
- background: url("../images/rainbow.jpg") no-repeat 50% 50% fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
+ background: url("../images/rainbow.jpg");
+ background-size: 100%;
 
 }
 #news{
@@ -175,4 +192,5 @@ top: 5px;
 }
 /*End Sticky Note CSS*/
 
-/*Begin News CSS*/
+/*Responsive CSS*/
+/*/
