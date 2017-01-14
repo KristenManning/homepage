@@ -55,11 +55,13 @@ p{
 #weather{
  background: url("../images/rainbow.jpg");
  background-size: 100%;
+ background-repeat: no-repeat;
 
 }
 #news{
   background-image: url("../images/desk.jpg");
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #transit{
@@ -197,9 +199,8 @@ position: absolute;
 top: 5px;
 }
 /*End Sticky Note CSS*/
-
 /*Responsive CSS*/
-@media screen and (max-height: 1000px) {
+@media screen and (max-width: 1024px) {
   #landingText{
 
   margin-top: 400px;
@@ -208,9 +209,6 @@ top: 5px;
 #enterPage{
 
   margin-top: 500px;
-}
-#openMusic{
-  top: 750px;
 }
 }
 /*/
