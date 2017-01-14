@@ -72,7 +72,7 @@ p{
 /*CSS to close button*/
 #sidenav #closebtn {
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
@@ -103,7 +103,7 @@ p{
   }    
 #musicbox #closebtn {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 25px;
   font-size: 36px;
   margin-right: 50px;

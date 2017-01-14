@@ -7,8 +7,8 @@ $("#test").on("click", function(){
 });
 // NavBar JS Starts
 //hides the open button
-$("#open").on("click",function(){
-  document.getElementById("open").style.zIndex = "-1";
+$("#openClick").on("click",function(){
+  document.getElementById("openClick").style.zIndex = "-1";
 });
 //pops the open button back up
 $("#closebtn").on("click", function(){
@@ -28,9 +28,19 @@ function closeNav() {
   document.getElementById("wrapper").style.marginLeft = "0";
 }
 // NavBar JS Ends
+
+//Music Bar JS
+$("#openMusic").on("click",function(){
+  document.getElementById("openMusic").style.zIndex = "-1";
+});
+//pops the open button back up
+$("#closebtn").on("click", function(){
+  document.getElementById("openMusic").style.zIndex = "0";
+});
+
 function openMusic(){
-	document.getElementById("musicbox").style.width = "250px";
-	document.getElementById("wrapper").style.marginRight = "250px";
+  document.getElementById("musicbox").style.width = "250px";
+  document.getElementById("wrapper").style.marginRight = "250px";
 }
 function closeMusic() {
   document.getElementById("musicbox").style.width = "0";
