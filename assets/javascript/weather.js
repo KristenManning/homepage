@@ -1,5 +1,3 @@
- 
-
   var city;
   var weather_url;
 

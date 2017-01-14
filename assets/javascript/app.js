@@ -28,7 +28,6 @@ function closeNav() {
   document.getElementById("wrapper").style.marginLeft = "0";
 }
 // NavBar JS Ends
-
 //Music Bar JS
 $("#openMusic").on("click",function(){
   document.getElementById("openMusic").style.zIndex = "-1";
@@ -46,3 +45,4 @@ function closeMusic() {
   document.getElementById("musicbox").style.width = "0";
   document.getElementById("wrapper").style.marginLeft = "0";
 }
+//Music Bar JS Ends

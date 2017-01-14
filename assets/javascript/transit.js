@@ -1,9 +1,5 @@
-
-
 var lat;
 var lon;
-
-
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: lat, lng: lon},

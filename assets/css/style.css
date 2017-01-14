@@ -49,21 +49,17 @@ p{
   font-family: 'Overpass Mono', monospace;
 }
 #landing{
-
 }
-
 #weather{
  background: url("../images/rainbow.jpg");
  background-size: 100%;
  background-repeat: no-repeat;
-
 }
 #news{
   background-image: url("../images/desk.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 #transit{
   background-image: url("../images/transit.png");
 }
@@ -130,7 +126,6 @@ p{
 #sSButton{
   margin-left: 13px;
 }
-
 /*Music CSS Ends*/
 /*Sticky Note CSS Begins*/
 *{
@@ -205,22 +200,22 @@ top: 5px;
 
   margin-top: 550px;
 
-}
-#enterPage{
+  }
+  #enterPage{
 
   margin-top: 650px;
-}
+  }
 }
 @media screen and (max-height: 768px) {
   #landingText{
 
   margin-top: 350px;
 
-}
-#enterPage{
+  }
+  #enterPage{
 
   margin-top: 450px;
-}
+  }
 }
 
 /*/
