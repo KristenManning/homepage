@@ -200,26 +200,26 @@ top: 5px;
 }
 /*End Sticky Note CSS*/
 /*Responsive CSS*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-height: 1024px) {
   #landingText{
 
-  margin-top: 400px;
+  margin-top: 550px;
 
 }
 #enterPage{
 
-  margin-top: 500px;
+  margin-top: 650px;
 }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-height: 768px) {
   #landingText{
 
-  margin-top: 300px;
+  margin-top: 350px;
 
 }
 #enterPage{
 
-  margin-top: 400px;
+  margin-top: 450px;
 }
 }
 
