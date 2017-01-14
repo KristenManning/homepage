@@ -6,34 +6,34 @@
 
 }
 
-.forecast-int-d2{
-	font-style: bold;
-	font-size: 35px;
-	
+.s1{
+	overflow: scroll;
+	height: 65%;
+	width: 65%;
+	border: solid;
+	border-color: black;
 }
 
-.forecast-int-d3{
-
+#time, #conditions, #temps{
+	text-align: center;
 }
 
-.conditions-d2{
-	font-size: 30px;
-	font-style: italic;
-
+#time{
+	font-size: 40px;
 }
 
-.conditions-d3{
-	
+#conditions{
+	font-size: 28px;
 }
 
-.temp-d1{
-	
+#temps{
+	font-size:48px;
 }
 
-.temp-d2{
-	font-size: 55px;
+th, td{
+	white-space: nowrap;
+    width: 1%;
 }
 
-.temp-d3{
-	
-}
+
+
