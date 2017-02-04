@@ -39,9 +39,19 @@ Our interface is designed with multiple navigation options that make it quick an
 * NY Times 
 
 ## Features: 
-
+###### Switch to a new section by scrolling on your touch pad, using the arrows on your keyboard, or choosing a page directly from the menu. 
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif1.gif)
+
+
+###### Input two locations to view walking, transit, and driving directions with traffic maps. 
+Otherwise, the map will automatically display your location. 
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif2.gif)
+
+
+###### View the weather in your location for the next 24 hours. 
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif3.gif)
+
+
+###### Play a song while you browse! 
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif4.gif)
 
