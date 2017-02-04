@@ -40,3 +40,8 @@ Our interface is designed with multiple navigation options that make it quick an
 
 ## Features: 
 
+![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif1.gif)
+![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif2.gif)
+![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif3.gif)
+![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif4.gif)
+
