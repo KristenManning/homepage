@@ -43,15 +43,40 @@ Our interface is designed with multiple navigation options that make it quick an
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif1.gif)
 
 
+
 ###### Input two locations to view walking, transit, and driving directions with traffic maps. 
-Otherwise, the map will automatically display your location. 
+###### Otherwise, the map will automatically display your location. 
+
+
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif2.gif)
 
 
+
 ###### View the weather in your location for the next 24 hours. 
+
+
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif3.gif)
 
 
+
+###### View the top headlines from New York Times in a variety of categories. 
+###### Click on any title to view the full article on the NYT website. 
+
+
+![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif5.gif)
+
+
+
+###### Create, save, and delete sticky notes. 
+###### If you exit and return to the page, your sticky notes will appear as they were the last time you saved. 
+
+
+![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif6.gif)
+
+
+
 ###### Play a song while you browse! 
+
+
 ![](https://github.com/KristenManning/homepage/blob/master/assets/readme-gifs/gif4.gif)
 
