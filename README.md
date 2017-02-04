@@ -10,10 +10,33 @@ With our homepage app, we aim to get you all of the information you need, straig
 
 * a local weather forecast 
 * NY Times top stories from a variety of topics
-* travel information with real-time traffic information 
+* navigation & traffic maps 
 
 as well as music and sticky-notes for added convenience and fun! 
 
 Our interface is designed with multiple navigation options that make it quick and simple to find the information you need. 
 
+## Contributors:
+
+* Christine Chong [GitHub] (https://github.com/ccho0415)
+* Andrew Federowicz [GitHub] (https://github.com/afederowicz)
+* Kristen Manning [GitHub] (https://github.com/KristenManning)
+
+## Technologies Used: 
+
+* HTML 
+* CSS
+  * Bootstrap
+* Javascript
+  * jQuery
+  * AJAX 
+
+## APIs: 
+
+* Google Maps 
+* Open Weather 
+* Spotify 
+* NY Times 
+
+## Features: 
 
