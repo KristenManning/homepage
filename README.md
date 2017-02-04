@@ -8,9 +8,9 @@ Times are changing and nowadays, many of us ignore newspapers and morning radio 
 
 With our homepage app, we aim to get you all of the information you need, straight from the source by integrating: 
 
-  *a local weather forecast 
-  *NY Times top stories from a variety of topics
-  *travel information with real-time traffic information 
+* a local weather forecast 
+* NY Times top stories from a variety of topics
+* travel information with real-time traffic information 
 
 as well as music and sticky-notes for added convenience and fun! 
 
